@@ -1,0 +1,11 @@
+<h1 class="text-2xl font-medium">
+  5 latest decrees published by the Flemish Government.
+</h1>
+
+<div class="mt-4">
+  {{#if (eq @state "loading")}}
+    <span class="text-gray-600 text-lg">Loading...</span>
+  {{else}}
+    <Decrees::List @data={{@data}} />
+  {{/if}}
+</div>
