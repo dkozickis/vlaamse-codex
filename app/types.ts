@@ -1,2 +1,5 @@
-export type Pokemon = { name: string };
-export type PokeApiReturn = { results: Pokemon[] };
+export type APICallReturnBase<ReturnKeys extends keyof any> = {
+  results: {
+    bindings: Record<ReturnKeys, { value: string }>[];
+  };
+};

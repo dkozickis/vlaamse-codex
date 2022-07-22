@@ -1,5 +1,14 @@
-<ul>
-  {{#each @data as |pokemon|}}
-    <li>{{pokemon}}</li>
+<div class="flex flex-col gap-4">
+  {{#each @data as |decree|}}
+    <dl title={{decree.title}} class="flex flex-col gap-2 border-b pb-4">
+      <div>
+        <dt class="font-medium">Date</dt>
+        <dd>{{decree.date}}</dd>
+      </div>
+      <div>
+        <dt class="font-medium">Title</dt>
+        <dd>{{decree.title}}</dd>
+      </div>
+    </dl>
   {{/each}}
-</ul>
+</div>
