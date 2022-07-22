@@ -38,7 +38,12 @@ export default class IndexRoute extends Route<
 
     return bindings.map(({ title, date }) => ({
       date: date.value,
-      title: title.value,
+      title: decodeTitle(title.value),
     }));
   }
 }
+const decodeTitle = (input: string) => {
+  const doc = new DOMParser().parseFromString(input, "text/html");
+
+  return doc.documentElement.textContent ?? "";
+};
