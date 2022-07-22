@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-'use strict';
+"use strict";
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const autoprefixer = require('autoprefixer');
-const tailwind = require('tailwindcss');
+const EmberApp = require("ember-cli/lib/broccoli/ember-app");
+const autoprefixer = require("autoprefixer");
+const tailwind = require("tailwindcss");
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -19,7 +19,7 @@ module.exports = function (defaults) {
           {
             module: tailwind,
             options: {
-              config: './app/styles/tailwind/config.js',
+              config: "./app/styles/tailwind/config.js",
             },
           },
         ],
